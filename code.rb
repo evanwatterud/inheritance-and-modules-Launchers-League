@@ -1,4 +1,4 @@
-class SuperHero
+module SuperHero
   attr_reader :public_identity
 
   def initialize(public_identity, secret_identity)
@@ -46,7 +46,9 @@ class SuperHero
   attr_reader :secret_identity
 end
 
-class Speedster < SuperHero
+class Speedster
+  include SuperHero
+
   def backstory
     "He wasn't this fast before"
   end
@@ -64,7 +66,9 @@ class Speedster < SuperHero
   end
 end
 
-class Brawler < SuperHero
+class Brawler
+  include SuperHero
+
   def backstory
     "He beat up some people"
   end
@@ -82,7 +86,9 @@ class Brawler < SuperHero
   end
 end
 
-class Detective < SuperHero
+class Detective
+  include SuperHero
+
   def backstory
     "He did some stuff I don't know about"
   end
@@ -100,7 +106,9 @@ class Detective < SuperHero
   end
 end
 
-class Demigod < SuperHero
+class Demigod
+  include SuperHero
+
   def backstory
     "Some accident made him crazy strong"
   end
@@ -118,7 +126,9 @@ class Demigod < SuperHero
   end
 end
 
-class JackOfAllTrades < SuperHero
+class JackOfAllTrades
+  include SuperHero
+
   def backstory
     "Can't think of anything"
   end
@@ -144,7 +154,9 @@ class JackOfAllTrades < SuperHero
   end
 end
 
-class WaterBased < SuperHero
+class WaterBased
+  include SuperHero
+
   def backstory
     "Likes water"
   end
